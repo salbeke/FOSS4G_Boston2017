@@ -13,7 +13,7 @@
 ######################################
 library(data.table) # enhanced version of data.frames. FAST.
 library(ggplot2) # data visualization package that breaks graphics into component parts (e.g., plot, layers, scales).
-wd <- "/home/user/R_workshop/data/"
+wd <- "D:/Avdata/R_Scripts/Albeke_CourseDevelopment/FOSS4G_Boston2017_RGeo/data"
 setwd(wd)
 
 # You could also use read.csv from base R here, but fread is way faster if you have large tables.
@@ -49,7 +49,7 @@ birds$y <- birds$LONGITUDE
 # Another way to swap the values in your columns - this way makes the change in place rather
 # than creating new columns.
 birds[ , c("LATITUDE", "LONGITUDE")] <- birds[ , c("LONGITUDE","LATITUDE")]
-
+plot(birds$LONGITUDE, birds$LATITUDE)
 # Ok, now we have a state included that is outside of New England. As GIS analysts,
 # our minds go right to "clipping it out," but we can do something even easier! 
 # Let's see what states we have in the data set:
@@ -157,7 +157,7 @@ nrow(birds[!complete.cases(birds),])
 nrow(birds)
 birds <- birds[complete.cases(birds),]
 # check rows again to make sure we removed the duplicate rows.
-
+nrow(birds)
 # Excellent! Let's write out this new clean table (or look in your data directory for my version.)
 write.table(birds, "eBird/ebd_NE_4spp_workshopData_dataCleanup.txt", row.names=F)
 # or

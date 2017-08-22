@@ -25,7 +25,7 @@ x[-3]
 # Locate missing data
 is.na(x)
 
-# Remove missing data
+# Remove missing data. ! means is not...
 x[!is.na(x)]
 # or 
 na.omit(x)

@@ -63,10 +63,10 @@ string
 
 
 # Logical
-logic <- "TRUE"
+logic <- TRUE
 logic
 #  logical test - boolean
-logic == "FALSE"
+logic == FALSE
 logic == F
 logic == T
 

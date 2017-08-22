@@ -19,11 +19,11 @@ library(tmap) # layer-based approach to building thematic maps
 library(gganimate) # create animated ggplot2 plots
 library(lubridate) # package that facilitates working with dates and times
 ######################################
-wd <- "/home/user/R_workshop/data/"
+wd <- "D:/Avdata/R_Scripts/Albeke_CourseDevelopment/FOSS4G_Boston2017_RGeo/data"
 setwd(wd)
 
 # 1. Re-open cleaned birds txt file
-birds <- fread("eBird/ebd_NE_4spp_workshopData_dataCleanup.txt", sep=" ")
+birds <- fread("./eBird/ebd_NE_4spp_workshopData_dataCleanup.txt", sep=" ")
 
 # 2. Convert to spatial points df
 # Although we've plotted the points, we haven't yet defined our birds data table as
